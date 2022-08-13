@@ -24,7 +24,7 @@ const fs = require('fs');
 //        函數名稱 帶入檔案名稱 編碼格式
 function readFile(fileName,CharacterEncoding){
     return new Promise((resolve, reject) => { //回傳一個 promise 物件
-        fs.readFile(filename, CharacterEncoding, (err, data) => {
+        fs.readFile(fileName, CharacterEncoding, (err, data) => {
             if (err) {
                 reject(err);
             } else {
@@ -35,7 +35,7 @@ function readFile(fileName,CharacterEncoding){
 };
 
 //執行readFile函數帶入要讀取的檔案名, 字元編碼 
-readFile("promise/test.txt","utf-8") 
+readFile("test.txt","utf-8") 
 .then((data)=>{  //成功用 then 讀出內容
     console.log(data);
 })
