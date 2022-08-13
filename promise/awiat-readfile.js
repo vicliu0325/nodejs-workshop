@@ -24,7 +24,7 @@ const fs = require('fs');
 //        函數名稱 帶入檔案名稱 編碼格式
 function readFile(fileName,CharacterEncoding){
     return new Promise((resolve, reject) => { //回傳一個 promise 物件
-        fs.readFile(filename, CharacterEncoding, (err, data) => {
+        fs.readFile(fileName, CharacterEncoding, (err, data) => {
             if (err) {
                 reject(err);
             } else {
