@@ -3,6 +3,6 @@ const express = require("express");
 const app = express();
 const port = 3002;
 
-app.listen(3001, () => {
+app.listen(3002, () => {
     console.log(`sever start at ${port}`);
 });
